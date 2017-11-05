@@ -215,7 +215,7 @@
 								<phase>package</phase>
 								<goals>
 									<goal>assemble</goal>
-									<!-- <goal>generate-daemons</goal> -->
+									<goal>generate-daemons</goal>
 								</goals>
 							</execution>
 						</executions>
