@@ -7,6 +7,10 @@
 	<pluginGroups>
 		<pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
 	</pluginGroups>
+	
+	
+	
+	
 
 	<!-- servers | This is a list of authentication profiles, keyed by the server-id 
 		used within the system. | Authentication profiles can be used whenever maven 
