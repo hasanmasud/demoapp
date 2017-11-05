@@ -1,0 +1,13 @@
+mvn clean verify sonar:sonar
+
+mvn clean install
+mvn sonar:sonar
+
+mvn tomcat7:run
+
+-----------------------------------------------------------------------------------------
+
+curl -i --user masudhasan:123456 http://localhost:8086/demoapp/rest/hello/masud
+    
+    
+    
