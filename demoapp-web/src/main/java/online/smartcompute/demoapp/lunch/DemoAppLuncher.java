@@ -7,6 +7,7 @@ import org.apache.catalina.startup.Tomcat;
 public class DemoAppLuncher {
 
 	public static final String DEFAULT_PORT = "8086";
+	public static final String CONTEXT_ROOT = "demoapp";
 
 	public static void main(String[] args) throws Exception {
 
@@ -36,7 +37,7 @@ public class DemoAppLuncher {
 		System.out.println("Basedir: " + basedir);
 		String webappLocation = new File(basedir).getAbsolutePath();
 		System.out.println("configuring app with basedir: " + webappLocation);
-		tomcat.addWebapp("/", webappLocation);
+		tomcat.addWebapp("/" + CONTEXT_ROOT, webappLocation);
 
 		tomcat.start();
 		tomcat.getServer().await();
