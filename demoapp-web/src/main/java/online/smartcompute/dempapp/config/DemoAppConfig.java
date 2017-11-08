@@ -14,16 +14,16 @@ import org.springframework.core.io.Resource;
 @Configuration
 public class DemoAppConfig {
 
-	/**
-	 * 
-	 * @return
-	 */
-	@Bean
-	public PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
-		PropertyPlaceholderConfigurer propertyPlaceholderConfigurer = new PropertyPlaceholderConfigurer();
-		Resource resource = new ClassPathResource("application.properties");
-		propertyPlaceholderConfigurer.setLocation(resource);
-		return propertyPlaceholderConfigurer;
-	}
+//	/**
+//	 * 
+//	 * @return
+//	 */
+//	@Bean
+//	public PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
+//		PropertyPlaceholderConfigurer propertyPlaceholderConfigurer = new PropertyPlaceholderConfigurer();
+//		Resource resource = new ClassPathResource("application.properties");
+//		propertyPlaceholderConfigurer.setLocation(resource);
+//		return propertyPlaceholderConfigurer;
+//	}
 
 }

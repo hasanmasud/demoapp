@@ -8,7 +8,7 @@
 
 	<annotation-driven />
 	<context:component-scan
-		base-package="online.smartcompute.demoapp.controller,online.smartcompute.dempapp.config" />
+		base-package="online.smartcompute.demoapp.api,online.smartcompute.dempapp.config" />
 
 	<!-- Configure to plugin JSON as request and response in method handler -->
 	<beans:bean

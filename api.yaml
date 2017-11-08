@@ -1,0 +1,72 @@
+# this is an example of the Uber API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: Demo API
+  description: This is a demo student api
+  version: "1.0.0"
+# the domain of the service
+host: smartcompute.online
+
+schemes:
+  - http
+# will be prefixed to all paths
+basePath: /
+produces:
+  - application/json
+paths:
+  /students/{studentId}:
+    get:
+      summary: details od a specific student
+      description: |
+       here is the description of the api
+      parameters:
+        - name: studentId
+          in: path
+          description: Latitude component of location.
+          required: true
+          type: integer
+      tags:
+        - Student
+      responses:
+        200:
+          description: An object with details
+          schema:
+            type: object
+            items:
+              $ref: '#/definitions/Student'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
+definitions:
+  Student:
+    type: object
+    properties:
+      id: 
+        type: integer
+        description: unique identification of a student
+      name:
+        type: string
+        description: name of the student.
+      age:
+        type: integer
+        minimum: 10
+        maximum: 40
+        description: age of the student
+      sex:
+        type: string
+        enum: [male,female]
+        description: male or female
+      
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string

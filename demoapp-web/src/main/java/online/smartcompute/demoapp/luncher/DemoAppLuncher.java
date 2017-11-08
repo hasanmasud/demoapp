@@ -1,4 +1,4 @@
-package online.smartcompute.demoapp.lunch;
+package online.smartcompute.demoapp.luncher;
 
 import java.io.File;
 import java.util.logging.Logger;
