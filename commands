@@ -8,6 +8,10 @@ mvn tomcat7:run
 -----------------------------------------------------------------------------------------
 
 curl -i --user masudhasan:123456 http://localhost:8086/demoapp/rest/hello/masud
-    
+
+
+mvn sonar:sonar  -Dsonar.host.url=http://localhost:9000 -Dsonar.login=masudhasan -Dsonar.password=123456
+
+
     
     

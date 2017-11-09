@@ -9,11 +9,11 @@
 	<name>demoapp</name>
 	<description>this is a demo app</description>
 
-	<!-- <scm> -->
-	<!-- <connection>scm:git:url</connection> -->
-	<!-- <developerConnection>scm:git:url</developerConnection> -->
-	<!-- <url>git url</url> -->
-	<!-- </scm> -->
+	<scm>
+		<connection>scm:git:https://github.com/hasanmasud/demoapp.git</connection>
+		<developerConnection>scm:git:https://github.com/hasanmasud/demoapp.git</developerConnection>
+		<url>https://github.com/hasanmasud/demoapp.git</url>
+	</scm>
 
 	<!-- <distributionManagement> -->
 	<!-- <site> -->
@@ -177,6 +177,8 @@
 				<artifactId>springfox-swagger-ui</artifactId>
 				<version>${springfox-version}</version>
 			</dependency>
+
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -198,6 +200,19 @@
 	<build>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.sonarsource.scanner.maven</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>3.3.0.603</version>
+				</plugin>
+				<plugin>
+					<groupId>com.rimerosolutions.maven.plugins</groupId>
+					<artifactId>wrapper-maven-plugin</artifactId>
+					<version>0.0.4</version>
+					<configuration>
+						<mavenVersion>3.3.1</mavenVersion>
+					</configuration>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
@@ -246,6 +261,18 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>com.rimerosolutions.maven.plugins</groupId>
+				<artifactId>wrapper-maven-plugin</artifactId>
+				<configuration>
+					<mavenVersion>3.3.1</mavenVersion>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>io.takari.maven.plugins</groupId>
+				<artifactId>takari-lifecycle-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -254,8 +281,14 @@
 		<module>demoappservice-implementation</module>
 		<module>demoapp-web</module>
 		<module>demoapp-logging</module>
-
 	</modules>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>sonatype.snapshots</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 </project>
 
