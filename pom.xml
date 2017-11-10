@@ -47,45 +47,17 @@
 		<slf.version>1.5.0</slf.version>
 		<tomcat.version>8.5.2</tomcat.version>
 		<springfox-version>2.6.1</springfox-version>
-
-
-
-
-		<maven.build.timestamp.format>MM.yyyy</maven.build.timestamp.format>
-		<yearMonth>${maven.build.timestamp}</yearMonth>
-		<sonar.projectKey>${project.artifactId}</sonar.projectKey>
-		<sonar.projectName>${project.artifactId}</sonar.projectName>
-		<sonar.projectVersion>${yearMonth}</sonar.projectVersion>
+		<sonar.projectVersion>${project.version}</sonar.projectVersion>
 		<sonar.language>java</sonar.language>
 		<sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
 		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 		<jacoco.version>0.7.2.201409121644</jacoco.version>
-		<!-- The Sonar Jacoco Listener for JUnit to extract coverage details per 
-			test -->
 		<sonar-jacoco-listeners.version>1.4</sonar-jacoco-listeners.version>
-		<!-- Don't let Sonar execute tests. We will ask it to Maven 'sonar.dynamicAnalysis' 
-			is deprecated since version 4.3 and should no longer be used. -->
-		<!-- <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis> -->
-		<!-- The system property jacoco.outputDir needs to be override on the command 
-			line with an absolute path if you want to merge results from all modules. 
-			Example in a Jenkisn build where ${WORKSPACE} is defined and your project 
-			in the root directory of the workspace : mvn clean install -Prun-its,coverage 
-			-Djacoco.outputDir=${WORKSPACE}/target Note that unfortunately using the 
-			following does not work because of http://jira.codehaus.org/browse/SONAR-3427: 
-			<jacoco.outputDir>${session.executionRootDirectory}/target/</jacoco.outputDir> -->
-
 		<jacoco.outputDir>${project.build.directory}</jacoco.outputDir>
 		<jacoco.out.ut.file>jacoco-ut.exec</jacoco.out.ut.file>
 		<sonar.jacoco.reportPath>${jacoco.outputDir}/${jacoco.out.ut.file}</sonar.jacoco.reportPath>
 		<jacoco.out.it.file>jacoco-it.exec</jacoco.out.it.file>
 		<sonar.jacoco.itReportPath>${jacoco.outputDir}/${jacoco.out.it.file}</sonar.jacoco.itReportPath>
-
-
-
-
-
-
-
 	</properties>
 
 	<dependencyManagement>
