@@ -15,13 +15,13 @@
 		<url>https://github.com/hasanmasud/demoapp.git</url>
 	</scm>
 
-	<!-- <distributionManagement> -->
-	<!-- <site> -->
-	<!-- <id>nexus.website</id> -->
-	<!-- <name>Apache Commons Site</name> -->
-	<!-- <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/commons/content/proper/commons-lang/</url> -->
-	<!-- </site> -->
-	<!-- </distributionManagement> -->
+	<distributionManagement>
+		<repository>
+			<id>hcl_snapshots</id>
+			<name>my snapshots internal Repository</name>
+			<url>http://localhost:8081/repository/hcl-snapshots/</url>
+		</repository>
+	</distributionManagement>
 
 	<developers>
 		<developer>
@@ -271,7 +271,6 @@
 			<plugin>
 				<groupId>io.takari.maven.plugins</groupId>
 				<artifactId>takari-lifecycle-plugin</artifactId>
-				<extensions>true</extensions>
 			</plugin>
 		</plugins>
 	</build>

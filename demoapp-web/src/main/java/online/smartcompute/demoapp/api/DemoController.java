@@ -19,12 +19,8 @@ public class DemoController {
 			@ApiParam(value = "is of the student", required = true) @PathVariable(value = "studentid", required = true) int studentid) {
 		LOGGER.appendStartLog("sayHello");
 		Student student = new Student();
-
 		student.setId(studentid);
-		
-		
 		System.out.println("ddd");
-
 		return student;
 	}
 
