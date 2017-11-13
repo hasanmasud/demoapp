@@ -7,6 +7,7 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<annotation-driven />
+
 	<context:component-scan
 		base-package="online.smartcompute.demoapp.api,online.smartcompute.dempapp.config" />
 

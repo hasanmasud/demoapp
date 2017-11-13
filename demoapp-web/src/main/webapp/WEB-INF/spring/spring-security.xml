@@ -17,11 +17,19 @@
 				<user name="masudhasan" password="123456" authorities="ROLE_USER" />
 				<user name="admin" password="admin" authorities="ROLE_ADMIN" />
 			</user-service>
+
+
+
+
 			<!-- <ldap-user-service user-search-base="dc=example,dc=com" -->
 			<!-- server-ref="myldapserder" role-prefix="ROLE_" /> -->
+
+
+
 		</authentication-provider>
 	</authentication-manager>
 
+	<!-- todo configure with ldap -->
 	<ldap-server id="myldapserder" url="ldap://localhost:10389" />
 
 </b:beans>
